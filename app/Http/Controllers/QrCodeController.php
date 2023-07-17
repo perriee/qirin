@@ -20,7 +20,7 @@ class QrCodeController extends Controller
     public function generate(Request $request)
     {
         $link = $request->input('link');
-        $qrCode = QrCode::format('png')->size(200)->generate($link);
+        $qrCode = QrCode::format('png')->size(300)->generate($link);
         $imageData = 'data:image/png;base64,' . base64_encode($qrCode);
 
         return view('generator')->with('imageData', $imageData);
