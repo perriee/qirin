@@ -17,6 +17,9 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->unsignedInteger('qr_count')->default(0);
+            $table->date('last_qr_date')->nullable();
+            $table->boolean('is_premium')->default(false);
             $table->rememberToken();
             $table->timestamps();
         });
