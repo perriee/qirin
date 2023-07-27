@@ -21,8 +21,9 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
-        'guest_token',
-        'usage_count'
+        'qr_count',
+        'last_qr_date',
+        'is_premium'
     ];
 
     /**
