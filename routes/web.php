@@ -16,6 +16,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/', function() {
+    return redirect()->route('index');
+});
+
 Route::get('/home', [QrCodeController::class, 'index'])->name('index');
 Route::get('/team', [QrCodeController::class, 'team'])->name('team');
 Route::get('/premium', [QrCodeController::class, 'show_premium_page'])->name('premium.show');
