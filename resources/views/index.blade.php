@@ -1,67 +1,36 @@
 @extends('layouts.master')
 
+@section('navbar')
+  @include('partials.header')
+@endsection
+
 @section('content')
-    {{-- Start Hero Section --}}
-    <section id="home" class="pt-44">
-      <div class="container">
-        <div class="flex flex-wrap">
-          <div class="w-full px-4 self-center lg:w-1/2">
-            <h1 class="text-3xl font-semibold mb-5 md:text-5xl">BUAT LINK KAMU JADI LEBIH <span class="text-primary font-bold">MENARIK</span></h1>
-            <p class="text-slate-400 mb-8 md:text-2xl">QiRin adalah platform pembuat QR Code dinamis yang membantu Anda menjadikan link menjadi lebih mudah untuk di akses.</p>
-            <a href="{{ route('create') }}" class="bg-teal-500 hover:bg-teal-600 lg:text-xl hover:shadow-lg text-white px-4 py-2 lg:px-6 lg:py-3 rounded-full inline-block transition duration-300">Mulai Sekarang</a>
-          </div>
-          <div class="w-full self-end px-4 lg:w-1/2">
-            <div class="mt-10">
-              <img src="{{ asset('images/qr-code-hero.png') }}" class="w-96 ml-auto" alt="QR CODE">
-            </div>
-          </div>
+  {{-- Start Hero Section --}}
+  <section id="home" class="pt-24 lg:pt-44">
+    <div class="bg-white">
+      <div class="mx-auto grid max-w-screen-xl px-4 py-8 lg:grid-cols-12 lg:gap-8 lg:py-16 xl:gap-0">
+        <div class="mr-auto place-self-center lg:col-span-7">
+          <h1 class="mb-4 max-w-2xl text-4xl font-semibold leading-none tracking-tight md:text-5xl xl:text-6xl">
+            BUAT LINK KAMU JADI LEBIH <span class="font-bold text-primary">MENARIK</span></h1>
+          <p class="mb-6 max-w-2xl text-slate-400 md:text-lg lg:mb-8 lg:text-2xl">QiRin
+            adalah platform pembuat QR Code dinamis yang membantu Anda menjadikan link menjadi lebih mudah untuk di akses.
+          </p>
+          <a href="{{ route('create') }}"
+            class="mr-3 inline-flex items-center justify-center gap-3 rounded-lg bg-primary px-5 py-3 text-center text-base font-medium text-white hover:bg-teal-700">
+            Buat Sekarang
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-6 w-6">
+              <path fill-rule="evenodd"
+                d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
+                clip-rule="evenodd" />
+            </svg>
+          </a>
+
+        </div>
+        <div class="ml-auto hidden lg:col-span-5 lg:mt-0 lg:flex">
+          <img src="{{ asset('images/qr-code-hero.png') }}" class="w-96" alt="mockup">
         </div>
       </div>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#149393" fill-opacity="1" d="M0,160L48,160C96,160,192,160,288,160C384,160,480,160,576,144C672,128,768,96,864,122.7C960,149,1056,235,1152,250.7C1248,267,1344,213,1392,186.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
-    </section>
-    {{-- End Hero Section --}}
-
-    {{-- Start Team Section --}}
-    <section id="team" class="pt-4 bg-primary">
-      <div class="container">
-        <div class="w-full pb-20">
-          <h1 class="text-5xl text-white font-semibold text-center pb-6">Tim Kami</h1>
-          <p class="text-2xl text-slate-200 text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis dolorum quia unde cupiditate sit dolorem distinctio eveniet magni, officia fuga.</p>
-        </div>
-        <div class="flex flex-wrap justify-center gap-10">
-          <div class="w-full self-center lg:w-1/5">
-              <img src="{{ asset('images/perr-amcc-square.png') }}" alt="Ferry Febriansyah">
-              <p class="text-xl text-center text-slate-200">Ferry Febriansyah</p>
-              <p class="text-md italic text-center text-slate-200">FrontEnd</p>
-            </div>
-            <div class="w-full self-center lg:w-1/5">
-              <img src="{{ asset('images/perr-amcc-square.png') }}" alt="Ferry Febriansyah">
-              <p class="text-xl text-center text-slate-200">Ferry Febriansyah</p>
-              <p class="text-md italic text-center text-slate-200">BackEnd</p>
-            </div>
-            <div class="w-full self-center lg:w-1/5">
-              <img src="{{ asset('images/perr-amcc-square.png') }}" alt="Ferry Febriansyah">
-              <p class="text-xl text-center text-slate-200">Ferry Febriansyah</p>
-              <p class="text-md italic text-center text-slate-200">UI/UX</p>
-            </div>
-          </div>
-          <div class="flex flex-wrap justify-center gap-10 pt-10">
-            <div class="w-full self-center lg:w-1/5">
-              <img src="{{ asset('images/perr-amcc-square.png') }}" alt="Ferry Febriansyah">
-              <p class="text-xl text-center text-slate-200">Ferry Febriansyah</p>
-              <p class="text-md italic text-center text-slate-200">Product Manager</p>
-            </div>
-            <div class="w-full self-center lg:w-1/5">
-              <img src="{{ asset('images/perr-amcc-square.png') }}" alt="Ferry Febriansyah">
-              <p class="text-xl text-center text-slate-200">Ferry Febriansyah</p>
-              <p class="text-md italic text-center text-slate-200">Full Stack</p>
-            </div>
-        </div>
-      </div>
-    </section>
-    {{-- End Team Section --}}
-
-    {{-- <hr class="bg-blue-300 h-2"> --}}
-
-    {{-- <div class="h-96"></div> --}}
+    </div>
+  </section>
+  {{-- End Hero Section --}}
 @endsection

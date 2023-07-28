@@ -32,7 +32,7 @@
                 required="">
             </div>
             <button type="submit"
-              class="focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 w-full rounded-lg bg-primary px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-teal-700 focus:outline-none focus:ring-4">Login</button>
+              class="focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 w-full rounded-lg bg-primary px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-teal-700 focus:outline-none focus:ring-4">Register</button>
             <p class="text-sm font-light text-gray-500 dark:text-gray-400">
               Sudah punya akun? <a href="{{ route('login') }}"
                 class="text-primary dark:text-primary-500 hover:underline font-semibold">Masuk.</a>
